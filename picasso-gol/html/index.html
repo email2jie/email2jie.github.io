@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Picasso-Gol</title>
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../css/picasso-gol.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/intro.js/2.2.0/introjs.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js" integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw=" crossorigin="anonymous"></script>
+    <script src="../js/bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/intro.js/2.2.0/intro.min.js"></script>
+  </head>
+  <body>
+    <h1>Picasso-Gol</h1>
+
+    <nav>
+      <button id="play-button">Play</button>
+      <button id="gridlines-button">Toggle Gridlines</button>
+      <button id="clear-button">Clear Grid</button>
+
+      <div class="sliders">
+      <h5>Speed:</h5>
+      <div id="speed-slider" class="slider"></div>
+
+      <h5>Zoom:</h5>
+      <div id="zoom-slider" class="slider"></div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <canvas id="g-o-l" width="800px" height="800px"></canvas>
+      <div class="sidebar instructions">
+        <h3>About</h3>
+        <p>
+          Picassol-Gol a simulator of Conway's Game of Life. The Game of Life is based on these simple rules:
+        </p>
+        <ol>
+          <h2>For a space that is 'populated':</h2>
+          <li>
+            Each cell with one or no neighbors dies, as if by solitude.
+          </li>
+          <br/>
+          <li>
+            Each cell with four or more neighbors dies, as if by overpopulation.
+          </li>
+          <br/>
+          <li>
+            Each cell with two or three neighbors survives.
+          </li>
+          <br/>
+          <h2>For a space that is 'empty' or 'unpopulated'</h2>
+          <br/>
+          <li>
+            Each cell with three neighbors becomes populated.
+          </li>
+        </ol>
+      </div>
+    </div>
+  </body>
+</html>
